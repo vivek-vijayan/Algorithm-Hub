@@ -10,6 +10,7 @@
 #include "iostream"
 #include "vector"
 
+void InsertionSort(std::vector <int>);
 
 int main(int argc, char const *argv[])
 {
@@ -25,6 +26,11 @@ int main(int argc, char const *argv[])
                 if (option=='y') goto getdata;
                 std::cout << "Data recorded" << std::endl;
     
+    InsertionSort(array);
+    return 0;
+}
+
+void InsertionSort(std::vector <int> array){
     // Main Algorithm - Insertion sort
     int SortingHead = 1, temp;
     while(SortingHead != array.size())
@@ -48,5 +54,4 @@ int main(int argc, char const *argv[])
     for(i = array.begin(); i != array.end(); i++){
         std::cout << *i << std::endl;
     }
-    return 0;
 }
